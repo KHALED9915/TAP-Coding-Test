@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --brownColor: #D1884F;
+    --contentColor: #008AAA;
+    --blueColor: #3BBADB;
+}
+
+header {
+    background-color: #fbf9f9;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--contentColor);
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+header ul li {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+header ul li span {
+    margin-left: 10px;
+    font-weight: 500;
+    color: rgb(95, 95, 95);
+    font-size: 16px;
+}
+
+.active {
+    color: var(--brownColor)
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 93vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.main .content h1 {
+    font-size: 40px;
+    color: var(--contentColor);
+    margin-bottom: 25px;
+}
+
+.content h4 {
+    color: var(--blueColor);
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.main .content .about {
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+.main .content .button-holder {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.main .content .button-holder .firstButton {
+    font-size: 16px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--contentColor);
+    border-color: white;
+}
+
+.main .content .button-holder .secondButton {
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: var(--blueColor);
+    background-color: white;
+    border-color: var(--blueColor);
+}
+
+.main .photo-container {
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.main .photo-container img {
+    width: 350px;
+    height: 350px;
+    border-radius: 0 0 0 45%;
+    position: relative;
+
+}
+
+.main .photo-container::before {
+    content: "";
+    position: absolute;
+    right: 200px;
+    top: 230px;
+    width: 24%;
+    height: 46%;
+    background: var(--blueColor);
+    margin-left: 94PX;
+    border-radius: 0 0 0 45%;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    .main .content h1 {
+        font-size: 20px;
+    }
+
+    .main .content {
+        max-width: 90%;
+        display: flex;
+        align-items: center;
+        height: 100px;
+        min-width: 300px;
+    }
+
+    .main .content .button-holder button {
+        font-size: 13px;
+    }
+
+    header {
+        padding: 10px 95px;
+    }
+
+    section {
+        padding: 100px 80px;
+    }
+
+    .main {
+        flex-direction: column-reverse;
+    }
+
+    .photo-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    .main .photo-container::before {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .main .photo-container::before {
+        display: none;
+    }
+
+    .main {
+        flex-direction: column-reverse;
+        padding: 10px 100px;
+        min-height: 73vh;
+    }
+
+    header {
+        padding: 10px 100px;
+    }
+
+    section {
+        padding: 10px 100px;
+    }
+
+    .main .content {
+        margin-top: 15px;
+    }
+
+    .main .content h1 {
+        font-size: 20px;
+    }
+
+    .main .photo-container {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width:1265px) {
+    .main .photo-container::before {
+        display: none;
+    }
+}
